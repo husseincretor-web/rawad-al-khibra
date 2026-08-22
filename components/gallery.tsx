@@ -24,6 +24,7 @@ export function Gallery() {
               إكسسوارات السيارات
             </h2>
           </div>
+
           <p className="max-w-sm text-pretty text-sm leading-relaxed text-muted-foreground">
             صور المحل والمنتجات تُعرض هنا. المساحات التالية مخصصة للصور الحقيقية.
           </p>
@@ -44,22 +45,6 @@ export function Gallery() {
             </li>
           ))}
         </ul>
-
-        <p className="mt-8 text-xs leading-relaxed text-muted-foreground">
-          لإضافة الصور: ضع الملفات في مجلد{' '}
-          <span className="font-semibold text-foreground" dir="ltr">
-            public/images/
-          </span>{' '}
-          بصيغة WebP أو AVIF بنفس الأسماء الظاهرة، ثم غيّر قيمة{' '}
-          <span className="font-semibold text-foreground" dir="ltr">
-            src
-          </span>{' '}
-          في ملف{' '}
-          <span className="font-semibold text-foreground" dir="ltr">
-            lib/site.ts
-          </span>
-          .
-        </p>
       </div>
     </section>
   )
