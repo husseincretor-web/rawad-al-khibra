@@ -35,7 +35,7 @@ export const site = {
     text: 'انصح بتعامل معهم بشده اتقان وعمل واخلاق وبعتمد المحل',
     author: 'سطام ال',
   },
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://rowad-alkhbra.vercel.app',
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://rawad-al-khibra.vercel.app',
 } as const
 
 export const navLinks = [
