@@ -50,34 +50,62 @@ export const navLinks = [
 
 /**
  * معرض الصور.
- * ضع الصور الحقيقية في مجلد public/images بنفس الاسم المذكور في `file`
- * (يفضل صيغة WebP أو AVIF)، ثم غيّر `src` إلى `/images/اسم-الصورة.webp`.
- * الخانات التي قيمة src فيها null تظهر كإطار فارغ بدون أي صورة وهمية.
+ * الصور الحقيقية موجودة داخل:
+ * public/images/
  */
+
 export type GalleryItem = {
   file: string
   src: string | null
   alt: string
 }
 
-/** صورة الغلاف الرئيسية (Hero) وصورة قسم «من نحن». نفس طريقة الاستبدال. */
+/**
+ * صورة واجهة المحل الرئيسية
+ */
 export const heroImage: GalleryItem = {
-  file: 'hero.webp',
-  src: null,
+  file: 'واجهة المحل.jpg',
+  src: '/images/واجهة المحل.jpg',
   alt: 'واجهة محل رواد الخبره لزينه السيارات في ينبع',
 }
 
+/**
+ * صورة قسم «من نحن»
+ * نستخدم صورة واجهة المحل نفسها لعدم وجود صورة داخلية منفصلة.
+ */
 export const aboutImage: GalleryItem = {
-  file: 'about.webp',
-  src: null,
-  alt: 'داخل محل رواد الخبره لزينه السيارات',
+  file: 'واجهة المحل.jpg',
+  src: '/images/واجهة المحل.jpg',
+  alt: 'واجهة محل رواد الخبره لزينه السيارات في ينبع',
 }
 
+/**
+ * معرض الصور
+ */
 export const gallery: GalleryItem[] = [
-  { file: 'gallery-1.webp', src: null, alt: 'واجهة محل رواد الخبره لزينه السيارات في ينبع' },
-  { file: 'gallery-2.webp', src: null, alt: 'عرض اكسسوارات السيارات داخل المحل' },
-  { file: 'gallery-3.webp', src: null, alt: 'قسم زينة السيارات في المحل' },
-  { file: 'gallery-4.webp', src: null, alt: 'منتجات وإكسسوارات متوفرة لدى رواد الخبره' },
-  { file: 'gallery-5.webp', src: null, alt: 'خدمة تركيب اكسسوارات السيارات' },
-  { file: 'gallery-6.webp', src: null, alt: 'صور من داخل معرض رواد الخبره لزينه السيارات' },
+  {
+    file: '1.jpg',
+    src: '/images/1.jpg',
+    alt: 'إكسسوارات السيارات لدى رواد الخبره',
+  },
+  {
+    file: '2.jpg',
+    src: '/images/2.jpg',
+    alt: 'إكسسوارات السيارات لدى رواد الخبره',
+  },
+  {
+    file: '3.jpg',
+    src: '/images/3.jpg',
+    alt: 'إكسسوارات السيارات لدى رواد الخبره',
+  },
+  {
+    file: '4.jpg',
+    src: '/images/4.jpg',
+    alt: 'إكسسوارات السيارات لدى رواد الخبره',
+  },
+  {
+    file: '5.jpg',
+    src: '/images/5.jpg',
+    alt: 'إكسسوارات السيارات لدى رواد الخبره',
+  },
 ]
