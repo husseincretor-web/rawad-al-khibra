@@ -50,6 +50,18 @@ export const viewport: Viewport = {
   themeColor: '#1c1c1e',
 }
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'AutoPartsStore',
+  'name': 'رواد الخبره لزينه السيارات',
+  'url': site.url,
+  'address': {
+    '@type': 'PostalAddress',
+    'addressLocality': 'ينبع',
+    'addressCountry': 'SA',
+  },
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -57,6 +69,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl" className={`${cairo.variable} bg-background`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
